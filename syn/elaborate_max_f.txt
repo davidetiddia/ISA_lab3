@@ -1,0 +1,237 @@
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Warning: Overwriting design file '/home/isa14/Documents/lab3/riscv/syn/risc_v.db'. (DDB-24)
+Warning: Overwriting design file '/home/isa14/Documents/lab3/riscv/syn/risc_v.db'. (DDB-24)
+Warning: Overwriting design file '/home/isa14/Documents/lab3/riscv/syn/risc_v.db'. (DDB-24)
+Warning: Overwriting design file '/home/isa14/Documents/lab3/riscv/syn/risc_v.db'. (DDB-24)
+Warning: Overwriting design file '/home/isa14/Documents/lab3/riscv/syn/risc_v.db'. (DDB-24)
+Elaborated 1 design.
+Current design is now 'risc_v'.
+Information: Building the design 'fetch_stage'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'IF_ID_reg'. (HDL-193)
+
+Inferred memory devices in process
+	in routine IF_ID_reg line 28 in file
+		'../src/FETCH/IF_ID_reg.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   instruction_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     PC_out_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   PC_next_out_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'decode_stage'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'ID_EXE_reg'. (HDL-193)
+
+Inferred memory devices in process
+	in routine ID_EXE_reg line 67 in file
+		'../src/DECODE/ID_EXE_reg.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   PC_next_out_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| RegSource1_out_reg  | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+| RegSource2_out_reg  | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   RegDest_out_reg   | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  Rs1_DATA_out_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  Rs2_DATA_out_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  Immediate_out_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    func3_out_reg    | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    func7_out_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     PCZ_out_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  RegWrite_out_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   ALUSrcA_out_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   ALUSrcB_out_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    ALUOp_out_reg    | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  MemWrite_out_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   MemRead_out_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  MemtoReg_out_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    jump_out_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     PC_out_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'execute_stage'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'EX_MEM_reg'. (HDL-193)
+
+Inferred memory devices in process
+	in routine EX_MEM_reg line 43 in file
+		'../src/EXECUTE/EX_MEM_reg.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   next_PC_out_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| RegSource2_out_reg  | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   RegDest_out_reg   | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+| ALU_output_out_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  WriteData_out_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  RegWrite_out_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  MemWrite_out_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   MemRead_out_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  MemtoReg_out_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    jump_out_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'memory_stage'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'MEM_WB_reg'. (HDL-193)
+
+Inferred memory devices in process
+	in routine MEM_WB_reg line 41 in file
+		'../src/MEMORY/MEM_WB_reg.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   PC_next_out_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   RegDest_out_reg   | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  Read_DATA_out_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| ALU_output_out_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  RegWrite_out_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    Jump_out_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  MemtoReg_out_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'writeback_stage'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mux21_32b'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'regPC'. (HDL-193)
+
+Inferred memory devices in process
+	in routine regPC line 19 in file
+		'../src/FETCH/PCreg.vhdl'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     dataout_reg     | Flip-flop |  31   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     dataout_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'PC_adder'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'imm_gen'. (HDL-193)
+
+Statistics for case statements in always block at line 19 in file
+	'../src/DECODE/imm_gen.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            21            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'adder'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'registerfile'. (HDL-193)
+
+Inferred memory devices in process
+	in routine registerfile line 67 in file
+		'../src/DECODE/regfile_nolatch.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     regfile_reg     | Flip-flop | 1024  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'branch_forward_unit'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'branch_forward_mux'. (HDL-193)
+
+Statistics for case statements in always block at line 23 in file
+	'../src/DECODE/branch_fwd_mux.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            25            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'branch_evaluator'. (HDL-193)
+
+Statistics for case statements in always block at line 24 in file
+	'../src/DECODE/branch_evaluator.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            27            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'hazard_unit'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'control_unit'. (HDL-193)
+
+Statistics for case statements in always block at line 45 in file
+	'../src/DECODE/control_unit.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            47            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'decode_hazard_mux'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'forwarding_unit'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'forward_mux'. (HDL-193)
+
+Statistics for case statements in always block at line 23 in file
+	'../src/EXECUTE/exe_fwd_mux.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            25            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'branch_mux'. (HDL-193)
+
+Statistics for case statements in always block at line 25 in file
+	'../src/EXECUTE/branch_mux.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            27            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'immediate_mux'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'alu_control'. (HDL-193)
+
+Statistics for case statements in always block at line 21 in file
+	'../src/EXECUTE/ALU_control.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            23            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'ALU'. (HDL-193)
+
+Statistics for case statements in always block at line 22 in file
+	'../src/EXECUTE/ALU.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            25            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'mem_forwarding'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'writedata_mux'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'jump_mux'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mem_wb_mux'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mux_32_1'. (HDL-193)
+Warning:  ../src/DECODE/mux_32_1.vhd:51: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 51 in file
+	'../src/DECODE/mux_32_1.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            51            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+1

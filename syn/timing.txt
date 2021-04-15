@@ -1,0 +1,152 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'riscv' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : riscv
+Version: O-2018.06-SP4
+Date   : Thu Apr 15 20:15:18 2021
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: ex_mem_pipeline_register/RegDest_out_reg[0]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: ex_mem_pipeline_register/ALU_output_out_reg[0]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv              5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ex_mem_pipeline_register/RegDest_out_reg[0]/CK (DFFR_X1)
+                                                          0.00 #     0.00 r
+  ex_mem_pipeline_register/RegDest_out_reg[0]/Q (DFFR_X1)
+                                                          0.11       0.11 f
+  ex_mem_pipeline_register/RegDest_out[0] (EX_MEM_reg)
+                                                          0.00       0.11 f
+  execute/ex_mem_reg_Rd[0] (execute_stage)                0.00       0.11 f
+  execute/forward_control/ex_mem_reg_Rd[0] (forwarding_unit)
+                                                          0.00       0.11 f
+  execute/forward_control/U32/ZN (OR2_X1)                 0.07       0.18 f
+  execute/forward_control/U31/ZN (NOR4_X1)                0.12       0.30 r
+  execute/forward_control/U13/ZN (NOR4_X1)                0.03       0.32 f
+  execute/forward_control/U2/ZN (AND4_X1)                 0.06       0.38 f
+  execute/forward_control/U5/ZN (NOR4_X1)                 0.12       0.50 r
+  execute/forward_control/forwardB[0] (forwarding_unit)
+                                                          0.00       0.50 r
+  execute/fwd_rs2/forward_sel[0] (forward_mux_1)          0.00       0.50 r
+  execute/fwd_rs2/U14/ZN (INV_X1)                         0.03       0.53 f
+  execute/fwd_rs2/U12/ZN (NOR2_X1)                        0.05       0.58 r
+  execute/fwd_rs2/U3/Z (BUF_X1)                           0.09       0.67 r
+  execute/fwd_rs2/U28/ZN (AOI222_X1)                      0.05       0.73 f
+  execute/fwd_rs2/U27/ZN (INV_X1)                         0.04       0.76 r
+  execute/fwd_rs2/output[1] (forward_mux_1)               0.00       0.76 r
+  execute/mux_immediate/reg_value[1] (immediate_mux)      0.00       0.76 r
+  execute/mux_immediate/U17/ZN (AOI22_X1)                 0.03       0.80 f
+  execute/mux_immediate/U16/ZN (INV_X1)                   0.10       0.90 r
+  execute/mux_immediate/output_value[1] (immediate_mux)
+                                                          0.00       0.90 r
+  execute/the_ALU/operand_2[1] (ALU)                      0.00       0.90 r
+  execute/the_ALU/U236/ZN (INV_X1)                        0.05       0.95 f
+  execute/the_ALU/U19/ZN (INV_X1)                         0.16       1.11 r
+  execute/the_ALU/sub_39/B[1] (ALU_DW01_sub_0)            0.00       1.11 r
+  execute/the_ALU/sub_39/U92/ZN (OAI22_X1)                0.07       1.17 f
+  execute/the_ALU/sub_39/U91/ZN (OR2_X1)                  0.06       1.24 f
+  execute/the_ALU/sub_39/U90/ZN (AOI22_X1)                0.07       1.30 r
+  execute/the_ALU/sub_39/U89/ZN (AND2_X1)                 0.05       1.35 r
+  execute/the_ALU/sub_39/U88/ZN (OAI22_X1)                0.04       1.39 f
+  execute/the_ALU/sub_39/U87/ZN (OR2_X1)                  0.06       1.45 f
+  execute/the_ALU/sub_39/U86/ZN (AOI22_X1)                0.07       1.52 r
+  execute/the_ALU/sub_39/U85/ZN (AND2_X1)                 0.05       1.56 r
+  execute/the_ALU/sub_39/U84/ZN (OAI22_X1)                0.04       1.60 f
+  execute/the_ALU/sub_39/U83/ZN (OR2_X1)                  0.06       1.66 f
+  execute/the_ALU/sub_39/U82/ZN (AOI22_X1)                0.07       1.73 r
+  execute/the_ALU/sub_39/U81/ZN (AND2_X1)                 0.05       1.78 r
+  execute/the_ALU/sub_39/U80/ZN (OAI22_X1)                0.04       1.81 f
+  execute/the_ALU/sub_39/U79/ZN (OR2_X1)                  0.06       1.88 f
+  execute/the_ALU/sub_39/U78/ZN (AOI22_X1)                0.07       1.94 r
+  execute/the_ALU/sub_39/U77/ZN (AND2_X1)                 0.05       1.99 r
+  execute/the_ALU/sub_39/U76/ZN (OAI22_X1)                0.04       2.02 f
+  execute/the_ALU/sub_39/U75/ZN (OR2_X1)                  0.06       2.09 f
+  execute/the_ALU/sub_39/U74/ZN (AOI22_X1)                0.07       2.15 r
+  execute/the_ALU/sub_39/U73/ZN (AND2_X1)                 0.05       2.20 r
+  execute/the_ALU/sub_39/U72/ZN (OAI22_X1)                0.04       2.23 f
+  execute/the_ALU/sub_39/U71/ZN (OR2_X1)                  0.06       2.30 f
+  execute/the_ALU/sub_39/U70/ZN (AOI22_X1)                0.07       2.36 r
+  execute/the_ALU/sub_39/U69/ZN (AND2_X1)                 0.05       2.41 r
+  execute/the_ALU/sub_39/U68/ZN (OAI22_X1)                0.04       2.44 f
+  execute/the_ALU/sub_39/U67/ZN (OR2_X1)                  0.06       2.51 f
+  execute/the_ALU/sub_39/U66/ZN (AOI22_X1)                0.07       2.57 r
+  execute/the_ALU/sub_39/U65/ZN (AND2_X1)                 0.05       2.62 r
+  execute/the_ALU/sub_39/U64/ZN (OAI22_X1)                0.04       2.66 f
+  execute/the_ALU/sub_39/U63/ZN (OR2_X1)                  0.06       2.72 f
+  execute/the_ALU/sub_39/U62/ZN (AOI22_X1)                0.07       2.78 r
+  execute/the_ALU/sub_39/U61/ZN (AND2_X1)                 0.05       2.83 r
+  execute/the_ALU/sub_39/U60/ZN (OAI22_X1)                0.04       2.87 f
+  execute/the_ALU/sub_39/U59/ZN (OR2_X1)                  0.06       2.93 f
+  execute/the_ALU/sub_39/U58/ZN (AOI22_X1)                0.07       2.99 r
+  execute/the_ALU/sub_39/U57/ZN (AND2_X1)                 0.05       3.04 r
+  execute/the_ALU/sub_39/U56/ZN (OAI22_X1)                0.04       3.08 f
+  execute/the_ALU/sub_39/U55/ZN (OR2_X1)                  0.06       3.14 f
+  execute/the_ALU/sub_39/U54/ZN (AOI22_X1)                0.07       3.20 r
+  execute/the_ALU/sub_39/U53/ZN (AND2_X1)                 0.05       3.25 r
+  execute/the_ALU/sub_39/U52/ZN (OAI22_X1)                0.04       3.29 f
+  execute/the_ALU/sub_39/U51/ZN (OR2_X1)                  0.06       3.35 f
+  execute/the_ALU/sub_39/U50/ZN (AOI22_X1)                0.07       3.41 r
+  execute/the_ALU/sub_39/U49/ZN (AND2_X1)                 0.05       3.46 r
+  execute/the_ALU/sub_39/U48/ZN (OAI22_X1)                0.04       3.50 f
+  execute/the_ALU/sub_39/U47/ZN (OR2_X1)                  0.06       3.56 f
+  execute/the_ALU/sub_39/U46/ZN (AOI22_X1)                0.07       3.62 r
+  execute/the_ALU/sub_39/U45/ZN (AND2_X1)                 0.05       3.67 r
+  execute/the_ALU/sub_39/U44/ZN (OAI22_X1)                0.04       3.71 f
+  execute/the_ALU/sub_39/U43/ZN (OR2_X1)                  0.06       3.77 f
+  execute/the_ALU/sub_39/U42/ZN (AOI22_X1)                0.07       3.83 r
+  execute/the_ALU/sub_39/U41/ZN (AND2_X1)                 0.05       3.88 r
+  execute/the_ALU/sub_39/U40/ZN (OAI22_X1)                0.04       3.92 f
+  execute/the_ALU/sub_39/U39/ZN (OR2_X1)                  0.06       3.98 f
+  execute/the_ALU/sub_39/U38/ZN (AOI22_X1)                0.07       4.04 r
+  execute/the_ALU/sub_39/U37/ZN (AND2_X1)                 0.05       4.09 r
+  execute/the_ALU/sub_39/U36/ZN (OAI22_X1)                0.04       4.13 f
+  execute/the_ALU/sub_39/U35/ZN (NOR2_X1)                 0.05       4.17 r
+  execute/the_ALU/sub_39/U34/ZN (OAI22_X1)                0.04       4.21 f
+  execute/the_ALU/sub_39/U2_31/S (FA_X1)                  0.13       4.34 r
+  execute/the_ALU/sub_39/DIFF[31] (ALU_DW01_sub_0)        0.00       4.34 r
+  execute/the_ALU/U234/ZN (NAND2_X1)                      0.03       4.37 f
+  execute/the_ALU/U233/ZN (NOR4_X1)                       0.06       4.43 r
+  execute/the_ALU/U42/ZN (AOI211_X1)                      0.03       4.46 f
+  execute/the_ALU/U40/ZN (NAND2_X1)                       0.04       4.50 r
+  execute/the_ALU/ALU_result[0] (ALU)                     0.00       4.50 r
+  execute/ALU_result[0] (execute_stage)                   0.00       4.50 r
+  ex_mem_pipeline_register/ALU_output[0] (EX_MEM_reg)     0.00       4.50 r
+  ex_mem_pipeline_register/ALU_output_out_reg[0]/D (DFFR_X1)
+                                                          0.01       4.51 r
+  data arrival time                                                  4.51
+
+  clock MY_CLK (rise edge)                                4.67       4.67
+  clock network delay (ideal)                             0.00       4.67
+  clock uncertainty                                      -0.07       4.60
+  ex_mem_pipeline_register/ALU_output_out_reg[0]/CK (DFFR_X1)
+                                                          0.00       4.60 r
+  library setup time                                     -0.03       4.57
+  data required time                                                 4.57
+  --------------------------------------------------------------------------
+  data required time                                                 4.57
+  data arrival time                                                 -4.51
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.06
+
+
+1

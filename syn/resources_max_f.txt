@@ -1,0 +1,61 @@
+ 
+****************************************
+Report : resources
+Design : risc_v
+Version: O-2018.06-SP4
+Date   : Thu Apr 15 14:18:24 2021
+****************************************
+
+Resource Sharing Report for design risc_v in file ../src/FETCH/MUX21_32b.vhd
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r389     | DW_cmp       | width=5    |               | decode/branch_fwd_unit/eq_57_2 |
+ |              |            |               | decode/hazard/eq_43_2 |
+| r392     | DW_cmp       | width=5    |               | decode/branch_fwd_unit/eq_74_2 |
+ |              |            |               | decode/hazard/eq_43_3 |
+| r396     | DW_cmp       | width=5    |               | decode/hazard/eq_31_2 |
+          |              |            |               | decode/hazard/eq_55_2 |
+| r397     | DW_cmp       | width=5    |               | decode/hazard/eq_31_3 |
+          |              |            |               | decode/hazard/eq_55_3 |
+| r430     | DW01_add     | width=32   |               | fetch/PC_add/add_16  |
+| r432     | DW01_add     | width=32   |               | decode/address_adder/add_20 |
+| r434     | DW_cmp       | width=5    |               | decode/branch_fwd_unit/eq_61_3 |
+| r436     | DW_cmp       | width=5    |               | decode/branch_fwd_unit/eq_61_4 |
+| r438     | DW_cmp       | width=5    |               | decode/branch_fwd_unit/eq_78_3 |
+| r440     | DW_cmp       | width=5    |               | decode/branch_fwd_unit/eq_78_4 |
+| r442     | DW_cmp       | width=32   |               | decode/branch_check/eq_28 |
+| r444     | DW_cmp       | width=5    |               | decode/hazard/eq_38_2 |
+| r446     | DW_cmp       | width=5    |               | decode/hazard/eq_38_3 |
+| r448     | DW_cmp       | width=5    |               | execute/forward_control/eq_54_2 |
+| r450     | DW_cmp       | width=5    |               | execute/forward_control/eq_58_3 |
+| r452     | DW_cmp       | width=5    |               | execute/forward_control/eq_58_4 |
+| r454     | DW_cmp       | width=5    |               | execute/forward_control/eq_70_2 |
+| r456     | DW_cmp       | width=5    |               | execute/forward_control/eq_74_3 |
+| r458     | DW_cmp       | width=5    |               | execute/forward_control/eq_74_4 |
+| r460     | DW01_add     | width=32   |               | execute/the_ALU/add_26 |
+| r462     | DW_sra       | A_width=32 |               | execute/the_ALU/sra_35 |
+         |              | SH_width=31 |              |                      |
+| r464     | DW01_sub     | width=32   |               | execute/the_ALU/sub_39 |
+| r466     | DW_cmp       | width=5    |               | memory/fwd_control/eq_30_2 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| fetch/PC_add/add_16                   |                    |                |
+|                    | DW01_add         | pparch (area,speed)                 |
+| decode/address_adder/add_20           |                    |                |
+|                    | DW01_add         | pparch (area,speed)                 |
+| execute/the_ALU/add_26                |                    |                |
+|                    | DW01_add         | pparch (area,speed)                 |
+| execute/the_ALU/sub_39                |                    |                |
+|                    | DW01_sub         | pparch (area,speed)                 |
+===============================================================================
+
+1
