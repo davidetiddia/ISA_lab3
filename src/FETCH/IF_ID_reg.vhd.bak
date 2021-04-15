@@ -1,0 +1,60 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity IF_ID_reg is
+    port(
+        CLK, RST_n          : in std_logic;
+        PC_in               : in std_logic_vector (31 downto 0);
+        PC_next_in          : in std_logic_vector (31 downto 0); -- contains PC + 4 (used for jumps)
+        fetched_instruction : in std_logic_vector (31 downto 0);
+
+        if_flush            : in std_logic;
+        if_id_Write         : in std_logic;
+
+        PC_out              : out std_logic_vector (31 downto 0);
+        PC_next_out         : out std_logic_vector (31 downto 0);
+        instruction         : out std_logic_vector (31 downto 0)
+    );
+end IF_ID_reg;
+
+
+
+architecture behavioral of IF_ID_reg is
+signal PC_tmp, instruction_tmp, PC_next_tmp : std_logic_vector (31 downto 0);
+--signal PC_next, instruction_next : std_logic_vector (31 downto 0);
+
+begin
+    PC_tmp <= PC_in;
+    PC_next_tmp <= PC_next_in;
+    instruction_tmp <= fetched_instruction;
+    
+    process (CLK, RST_n)
+    begin
+        if (RST_n = '0') then
+            PC_out <= (others => '0');
+            PC_next_out <= (others => '0');
+            instruction <= (others => '0');
+        elsif rising_edge(CLK) then
+                -- if a flush is required the reg is cleared
+                if ((if_flush = '1') and (if_id_Write = '0')) THEN
+                PC_out <= (others => '0');
+                PC_next_out <= (others => '0');
+                instruction <= (others => '0');
+
+                -- if a hazard is present, the reg is not written and keeps the old value
+                --elsif ((if_flush = '0') and (if_id_Write = '0')) THEN
+--                PC_out <= PC_out;
+--                PC_next_out <= PC_next_out;
+--                instruction <= instruction;
+                
+                -- otherwise, normal execution 
+                elsif ((if_flush = '0') and (if_id_write = '1')) then            
+                PC_out <= PC_in;
+                PC_next_out <= PC_next_in;
+                instruction <= fetched_instruction;
+                end if;
+        end if;
+    end process;
+
+end behavioral;
