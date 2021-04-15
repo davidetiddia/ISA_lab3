@@ -1,0 +1,112 @@
+m255
+13
+cModel Technology
+d/home/isa14/Documents/lab3/riscv/sim
+T_opt
+V17C_Q:B4mY[econXXj]T>2
+06 8 4 ./work tb_riscv test 0
+o-quiet -auto_acc_if_foreign -work work -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /tb_riscv/UUT=../innovus/riscv.sdf -suppress 1948
+tExplicit 1
+OE;O;6.2g;35
+Edata_mem
+w1617983301
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8/home/isa14/Documents/lab3/riscv/tb/data_memory.vhd
+F/home/isa14/Documents/lab3/riscv/tb/data_memory.vhd
+l0
+L8
+V2_9>j[7<1Y^_dDG[@W_^c2
+OE;C;6.2g;35
+32
+o-work work
+tExplicit 1
+Abehavioral
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work data_mem 2_9>j[7<1Y^_dDG[@W_^c2
+l29
+L22
+VL2:3<Y6@G7j8oZV3`X8E61
+OE;C;6.2g;35
+32
+M4 ieee std_logic_1164
+M3 ieee numeric_std
+M2 std textio
+M1 ieee std_logic_textio
+o-work work
+tExplicit 1
+Einstruction_mem
+w1617983301
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8/home/isa14/Documents/lab3/riscv/tb/instruction_memory.vhd
+F/home/isa14/Documents/lab3/riscv/tb/instruction_memory.vhd
+l0
+L8
+VnEba`@`b[;hh`F_8I@5zC0
+OE;C;6.2g;35
+32
+o-work work
+tExplicit 1
+Abehavioral
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work instruction_mem nEba`@`b[;hh`F_8I@5zC0
+l25
+L18
+V1GSk4?F0MV]f4Y3Zg22lS0
+OE;C;6.2g;35
+32
+M4 ieee std_logic_1164
+M3 ieee std_logic_arith
+M2 std textio
+M1 ieee std_logic_textio
+o-work work
+tExplicit 1
+vriscv
+IQJ;U?Ych<iLIkcIYH>74c0
+VbX8[N=7oX1QG23l8[>O6=2
+w1618516002
+8/home/isa14/Documents/lab3/riscv/innovus/riscv.v
+F/home/isa14/Documents/lab3/riscv/innovus/riscv.v
+L0 15
+VbX8[N=7oX1QG23l8[>O6=2
+OE;L;6.2g;35
+r1
+31
+o-work work
+Etb_riscv
+w1618509915
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8/home/isa14/Documents/lab3/riscv/tb/tb_riscv.vhd
+F/home/isa14/Documents/lab3/riscv/tb/tb_riscv.vhd
+l0
+L5
+VPBk02^`Qg0[LOM>o9WWgC3
+OE;C;6.2g;35
+32
+o-work work
+tExplicit 1
+Atest
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work tb_riscv PBk02^`Qg0[LOM>o9WWgC3
+l58
+L9
+V]e]]JS>7:ODT6K:ZMYgB=0
+OE;C;6.2g;35
+32
+M2 ieee std_logic_1164
+M1 ieee numeric_std
+o-work work
+tExplicit 1
